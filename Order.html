@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+
+<div id="Order">
+    <h2 id="Title2">Purchase Order</h2>
+    <p>Fill in the information below to confirm purchase.</p>
+</div>
+
+<!----------------------------ORDER FORM------------------------------------------------------->
+
+<form id="orderForm" action="OrderConfirmation.html" method="post" onsubmit="return validateOrder() ;">
+
+<p>
+
+    <div class="row2">
+    <label for="name">Name:</label>
+    <input type="text" id="name2" name=""> </br> </br>
+    </div>
+    
+    <div class="row2">
+    <label for="address">Address:</label>
+    <input type= "text" id="address" name=""> </br> </br>
+    </div>
+     
+    <div class="row2">
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name=""> </br> </br> 
+    </div>
+
+    <div class="row2">
+    <label for="credit card">Credit Card: </label>
+    <input type="number" id="credit card" name=""> </br> </br>
+    </div>
+
+    </p>
+    
+    <input type="submit" value="Order">
+
+</form>
+
+<script src="ETRO.js"> </script>
+
+</body>
+
+</html>

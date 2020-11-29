@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">    
+
+</head>
+
+<body>
+
+<div id="Csection2">
+    <h2 id="Title3">Contact Us</h2>
+
+<p> Our customer support team will be available to answer all your inquries about our company, products, purchase orders and shipment information. 
+</p>
+<p> Email us at ETROelectronics@store.com or fill in the information below to send us an email!
+</p>
+
+<!-- form validation still needs to be worked on-->
+<form id="emailForm" action="Emailsent.html" method="post" onsubmit="return validateTextbox() ;">
+
+<p>
+
+<div class="row">
+<label for="name">Name:</label>
+<input type="text" id="name" name=""> </br> </br>
+</div>
+
+<div class="row">
+<label for="email">Email:</label>
+<input type= "email" id="email" name=""> </br> </br>
+</div>
+ 
+<br>
+<div class="row">
+<label for="message">Message:</label>
+<textarea id="message" name="" rows="15" cols="100"> </textarea> 
+
+
+</div>
+
+</p>
+
+
+<br>
+
+<input type="submit" value="Send">
+ 
+</form>
+<!-- form validation still needs to be worked on-->
+
+</div>
+
+<script src="ETRO.js"></script>
+
+</body>
+
+</html>

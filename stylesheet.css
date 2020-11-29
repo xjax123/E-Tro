@@ -1,0 +1,164 @@
+body {background-color: #D2CFC6;
+    margin: 5px;
+    font-family: Verdana, Georgia, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+/* ====================== HOMEPAGE ========================*/
+
+#header {background-color: whitesmoke;
+margin: 10px;
+height: 90px;
+border-radius: 5px;
+}
+
+#MS {background-color: rgb(238, 224, 148);
+    margin: 10px;
+    height: 60px;
+    border-radius: 5px;
+    padding: 5px
+
+}
+
+#Psection {background-color: rgb(238, 224, 148);
+    margin: 10px;
+    height: 290px;
+    border-radius: 5px;
+    padding: 5px
+
+}
+
+#Csection {background-color: rgb(238, 224, 148);
+    margin: 10px;
+    height: 160px;
+    border-radius: 5px;
+    padding: 5px
+}
+
+
+#footer1 {background-color: whitesmoke;
+    margin: 10px;
+    height: 20px;
+    border-radius: 5px;
+    color: none ;
+    text-align: center;
+    padding: 15px;
+    font-size: 90%;
+
+ }
+
+/* ================= PRODUCTS PAGE ===========================*/
+
+
+#Psection2 {background-color: rgb(238, 224, 148);
+    margin: 10px;
+    height: 130px;
+    border-radius: 5px;
+    padding: 5px
+}
+
+.product {text-align: center;
+    opacity: 1.0;
+    transition: opacity 0.7s ease-in-out}
+
+.product:hover {opacity: 0.6;}
+
+
+.description {color: black;}
+
+.box { background-color: rgb(238, 224, 148);
+    border: 1px solid rgb(245, 190, 50);
+    border-radius: 1em;
+    font-size: 95%;
+    padding: 15px;
+    margin: 10px;
+    width: 280px;
+    color: whitesmoke;
+    float: left; 
+    }
+
+
+/* =================== CONTACTS PAGE =============================*/
+
+#Csection2 {background-color: rgb(238, 224, 148);
+    margin: 10px;
+    height: 630px;
+    border-radius: 5px;
+    padding: 5px
+
+}
+
+#Homebutton {margin: 10px;}
+
+/*      == form validation code needs correction ==        */
+
+
+.row {
+    display: table-row;
+    }
+    
+    .row label {
+    display: table-row;
+    }
+    
+    .row input {
+        display: table-cell;
+        padding:5px;
+    }
+
+
+/* ========================== HEADERS SECTION ============================== */
+
+h1 {color: rgb(245, 190, 50);
+text-align: center;
+text-shadow: 2px 1px navy;  
+font-size: 410%;
+
+
+}
+
+
+h2 {color: rgb(245, 190, 50);
+border-bottom: 1px solid black;
+text-shadow: 2px 1px navy;  
+}
+
+p {color: rgb(82, 75, 75);
+font-size: 20px;
+font-family: Helvetica;
+
+}
+
+/* ======================ORDERS PAGE===============================================*/
+
+#Order {background-color: rgb(238, 224, 148);
+    margin: 10px;
+    height: 130px;
+    border-radius: 5px;
+    padding: 5px
+}
+
+#orderForm {background-color: rgb(238, 224, 148);
+    margin: 10px;
+    height: 350px;
+    border-radius: 5px;
+    padding: 5px;
+    
+
+}
+
+.row2 {
+    display: table-row;
+    }
+    
+.row2 label {
+    display: table-row;
+    padding: 5px;
+    }
+
+.row2 input {
+    display: table-cell;
+    padding:5px;
+}
+
+/*==============================================================================*/
