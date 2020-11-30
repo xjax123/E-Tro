@@ -8,15 +8,26 @@
 
 </head>
 
-<body>
+<body onload="gatherCookies()">
 
 <p> Your order has been sent and is now being processed! Due to COVID-19 we are expecting a high volume of online purchases. Please allow 10-14 business days for shipment to arrive.
 
     <br> <br> Thank you for shopping at E-TRO!
 
 </p>
+<div class="orderdetails">
+	<p>Order Details</p>
+	<h4 class="head">Name</h4>
+	<p id="name">Null</p>
+	<h4 class="head">Address</h4>
+	<p id="address">Null</p>
+	<h4 class="head">Phone Number</h4>
+	<p id="phone">Null</p>
+	<h4 class="head">Card Number</h4>
+	<p id="ccardnum">Null</p>
+</div>
 
-<div id=Homebutton>
+<div id="Homebutton">
     <a href="../Home/HomepageETRO.html">
         <button>Go Back to Homepage</button>
     </a> 

@@ -3,7 +3,15 @@ body {background-color: #D2CFC6;
     font-family: Verdana, Georgia, Tahoma, sans-serif;
     font-size: 16px;
 }
+.orderdetails {
+	border: 1px solid black;
+	padding: 25px;
+}
 
+#head {color: rgb(0, 0, 0);
+border-bottom: 1px solid black;
+text-shadow: none;
+}
 /* ====================== HOMEPAGE ========================*/
 
 #header {background-color: whitesmoke;
