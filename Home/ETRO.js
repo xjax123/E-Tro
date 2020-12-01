@@ -1,26 +1,11 @@
 //------------------------General Functions--------------------------------------
 
-function setCookie(cookiename, cookievalue, expirydays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (expirydays*24*60*60*1000));
-  var expires = "expires="+ d.toUTCString();
-  document.cookie = cookiename + "=" + cookievalue + ";" + expires + ";path=/";
+function setCookie(cookiename, cookievalue) {
+	sessionStorage.setItem(cookiename, cookievalue)
 }
 
 function getCookie(cookiename) {
-  var name = cookiename + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i <ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
+	return sessionStorage(cookiename);
 }
 
 //-------------------------Form Validation for Email sent-------------------------
@@ -42,25 +27,6 @@ var box3 = document.getElementById("message");
 
 }
 
-//------------------Cookie Checking For Order Confirmation-----
-
-function gatherCookies(){
-	var name = document.getElementById("name");
-	var address = document.getElementById("address");
-	var phone = document.getElementById("phone");
-	var cc = document.getElementById("ccardnum");
-	var cname = getCookie("name");
-	var caddress = getCookie("address");
-	var cphone = getCookie("phone");
-	var ccc = getCookie("creditcard");
-	
-	name.innerHTML = cname;
-	address.innerHTML = caddress;
-	phone.innerHTML = cphone;
-	var ccsub = ccc.substring(0,cc.value.length-2)
-	ccc = "****-****-****-**"+ccsub;
-	cc.innerHTML = ccc;
-}
 
 //==================Form Validation on Order form===============
 
@@ -108,12 +74,20 @@ function validateOrder()  {
 		alert(box4.value.length);
 		return false;
 	}
-	
+
 	//Set Cookies
-	setCookie("name", box.value.innerHTML, 1)
-	setCookie("address", box2.value.innerHTML, 1)
-	setCookie("phone", box3.value.innerHTML, 1)
-	setCookie("creditcard", box4.value.innerHTML, 1)
+	setCookie("name", box.value.innerHTML)
+	setCookie("address", box2.value.innerHTML)
+	setCookie("phone", box3.value.innerHTML)
+	setCookie("creditcard", box4.value.innerHTML)
+}
+
+//================Product Page===========================
+
+function saveItem(item) {
+	var url = item.src;
+	url = url.replaceAll(".jpg", "");
+	setCookie("device", url);
 }
 
 /* Comment by Shaira : I did a simple Form Validation on the Order Form and Contacts page.
@@ -123,12 +97,12 @@ function validateOrder()  {
 
 /*
 TODO:
-PHP
-Cookies
-SQL
-VBScript
+PHP (Looks Functional)
+Cookies (They look Functional)
+SQL (Looks Functional)
+VBScript 
 ASP
-Web Server Security Issues
+Web Server Security Issues 
 Authentication
 */
 
