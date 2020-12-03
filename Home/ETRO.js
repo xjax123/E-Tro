@@ -12,19 +12,32 @@ function getCookie(cookiename) {
 
 function validateTextbox()  {
 
-var box = document.getElementById("name"); 
-var box2 = document.getElementById("email");
-var box3 = document.getElementById("message");
+	var box = document.getElementById("name"); 
+	var box2 = document.getElementById("email");
+	var box3 = document.getElementById("message");
 
- if (box.value.length < 5 || box2.value.length < 5 || box3.value.length < 5)   {
- alert ("Please enter at least 5 characters in all fields");
- box.focus() ; box2.focus(); box3.focus();
- box.style.border = "solid 3px red"; box2.style.border = "solid 3px red";
- box3.style.border = "solid 3px red";
- return false;
-
- }
-
+	if (box.value.length < 2 && box.innerHTML.includes("@") && box.innerHTML.includes(".")) {
+		box.focus();
+		box.style.border = "solid 3px red";
+		error = true;
+	}
+	
+	if (box2.value.length < 2 && box2.innerHTML.includes("@") && box2.innerHTML.includes(".")) {
+		box2.focus();
+		box2.style.border = "solid 3px red";
+		error = true;
+	}
+	
+	if (box3.value.length < 2 && box3.innerHTML.includes("@") && box3.innerHTML.includes(".")) {
+		box3.focus();
+		box3.style.border = "solid 3px red";
+		error = true;
+	}
+	
+	if (error == true) {
+		alert("Please Correct The Form Before you continue");
+		return false;
+	}
 }
 
 
@@ -71,7 +84,7 @@ function validateOrder()  {
 	
 	//return an error
 	if (error == true) {
-		alert(box4.value.length);
+		alert("Please Correct The Form Before you continue");
 		return false;
 	}
 
@@ -97,13 +110,14 @@ function saveItem(item) {
 
 /*
 TODO:
+XHTML/JS (Obviously Working)
 PHP (Looks Functional)
-Cookies (They look Functional)
+Cookies (Looks Functional)
 SQL (Looks Functional)
-VBScript 
-ASP
-Web Server Security Issues 
-Authentication
+VBScript (Can probably BS about)
+Form/Form Validation (Working)
+Web Server Security Issues (?)
+Authentication (I guess?)
 */
 
     
