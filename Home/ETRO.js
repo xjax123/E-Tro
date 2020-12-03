@@ -16,7 +16,7 @@ function validateTextbox()  {
 	var box2 = document.getElementById("email");
 	var box3 = document.getElementById("message");
 
-	if (box.value.length < 2 && box.innerHTML.includes("@") && box.innerHTML.includes(".")) {
+	if (box.value.length < 2) {
 		box.focus();
 		box.style.border = "solid 3px red";
 		error = true;
@@ -28,7 +28,7 @@ function validateTextbox()  {
 		error = true;
 	}
 	
-	if (box3.value.length < 2 && box3.innerHTML.includes("@") && box3.innerHTML.includes(".")) {
+	if (box3.value.length < 2) {
 		box3.focus();
 		box3.style.border = "solid 3px red";
 		error = true;
