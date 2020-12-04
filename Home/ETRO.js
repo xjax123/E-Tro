@@ -15,6 +15,10 @@ function validateTextbox()  {
 	var box = document.getElementById("name"); 
 	var box2 = document.getElementById("email");
 	var box3 = document.getElementById("message");
+	var error = false;
+	box.style.border = "none";
+	box2.style.border = "none";
+	box3.style.border = "none";
 
 	if (box.value.length < 2) {
 		box.focus();
@@ -35,7 +39,7 @@ function validateTextbox()  {
 	}
 	
 	if (error == true) {
-		alert("Please Correct The Form Before you continue");
+		alert("Please correct the form before you continue");
 		return false;
 	}
 }
@@ -48,11 +52,11 @@ function validateOrder()  {
     var box2 = document.getElementById("address");
     var box3 = document.getElementById("phone");
     var box4 = document.getElementById("credit card");
-	var error = false;
-	box.style.border = "none";
-	box2.style.border = "none";
-	box3.style.border = "none";
-	box4.style.border = "none";
+    var error = false;
+    box.style.border = "none";
+    box2.style.border = "none";
+    box3.style.border = "none";
+    box4.style.border = "none";
 	
 	//Validate Box1
 	if (box.value.length < 2) {
@@ -76,7 +80,7 @@ function validateOrder()  {
 	}
 	
 	//Validate Box4
-	if (box4.value.length == 17 ) {
+	if (box4.value.length < 16 ) {
 		box4.focus();
 		box4.style.border = "solid 3px red";
 		error = true;
@@ -84,7 +88,7 @@ function validateOrder()  {
 	
 	//return an error
 	if (error == true) {
-		alert("Please Correct The Form Before you continue");
+		alert("Please correct the form before you continue");
 		return false;
 	}
 
@@ -103,9 +107,33 @@ function saveItem(item) {
 	setCookie("device", url);
 }
 
-/* Comment by Shaira : I did a simple Form Validation on the Order Form and Contacts page.
- It isn't perfect. Feel free to tweak it.
- Or we can just make it work on the video report
+/* ===========================Cookie pop up============================*/
+
+const storageType = sessionStorage;
+const consentPropertyName = 'etro_consent';
+
+const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+const saveToStorage = () => storageType.setItem(consentPropertyName, 1);
+
+window.onload = () => {
+	if (shouldShowPopup ()) {
+		const consent = confirm('This site uses cookies. Agree to terms and conditions.');
+		if (consent) {
+			saveToStorage ();
+		}
+		
+	}
+};
+
+/*============================================================================*/
+
+/* Comment by Shaira : Added a Cookies pop-up. Should show up when user enters the site. 
+		       Credit card text box wasn't validating on the Order form, so I tweaked that to just the enter a 16-digit number condition.
+		       Text boxes in Email form <Contacts.html> weren't validating.
+		       		Red borders were not showing up and or/ disappearing when correctly filled in. 
+				Tweaked it so, if you fill in the email text box first. Should work.
+		       		
+		       		
  */
 
 /*
